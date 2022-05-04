@@ -1,0 +1,104 @@
+.forward-x-enter, .forward-y-enter {
+    transform: translate3d(100%, 0 ,0);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+    z-index: 1100;
+}
+
+.forward-y-enter {
+    transform: translate3d(0, 100%, 0);
+}
+
+.forward-x-enter::after, .forward-y-enter::after {
+    content:"";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    background-color: #000;
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+}
+
+.forward-x-enter-active, .forward-y-enter-active {
+    transition: transform 300ms;
+    transform: translate3d(0, 0, 0);
+}
+
+.forward-x-enter-active::after, .forward-y-enter-active::after {
+    transition: opacity 300ms;
+    opacity: 0.5;
+    transform: translate3d(-100%, 0, 0);
+}
+
+.forward-y-enter-active::after {
+    transform: translate3d(0, -100%, 0);
+}
+
+.backward-x-exit, .backward-y-exit {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fafafa;
+    z-index: 2;
+    transition: transform 300ms;
+    transform: translate3d(100%, 0, 0);
+}
+
+.backward-y-exit {
+    transform: translate3d(0, 100%, 0);
+}
+
+.backward-x-exit::after, .backward-y-exit::after {
+    content:"";
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    min-height: 100%;
+    width: 100vw;
+    background-color: #000;
+    opacity: 0.5;
+    transform: translate3d(-100%, 0, 0);
+}
+
+.backward-y-exit::after {
+    transform: translate3d(0, -100%, 0);
+}
+
+.backward-x-exit-active, .backward-y-exit-active {
+    transition: transform 300ms;
+}
+
+.backward-x-exit-active::after, .backward-y-exit-active::after {
+    transition: opacity 300ms;
+    opacity: 0;
+}
+
+.backward-x-enter-active::after {
+    transition: opacity 300ms;
+    opacity: 0;
+}
+
+.forward-x-exit-active::after, .forward-y-exit-active::after {
+    transition: opacity 300ms;
+    opacity: 0;
+}
+
+.forward-y-enter-done {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: white;
+    width: 100vw;
+    height: 100vh;
+}
+
+.skip-exit {
+    display: none;
+}
