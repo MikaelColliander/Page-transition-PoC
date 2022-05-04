@@ -15,7 +15,7 @@ import {
   Container,
   Typography,
 } from "@sjse/component-library";
-import { IconButton } from "@sjse/component-library/node_modules/@material-ui/core";
+import { IconButton } from "@sjse/component-library";
 import { default as HelpDialog } from "../Help/Help";
 import Stations from "../Stations/Stations";
 import { AnimatePresence } from "framer-motion";
@@ -38,7 +38,7 @@ const TravelFinder = () => {
           leftButtonProps={{
             linkComponent: (
               <Link to="/">
-                <IconButton>
+                <IconButton ariaLabel="stäng">
                   <Cancel />
                 </IconButton>
               </Link>
@@ -51,7 +51,7 @@ const TravelFinder = () => {
             label: "Hjälp",
             linkComponent: (
               <Link to={`${url}/hjalp`}>
-                <IconButton>
+                <IconButton ariaLabel="hjälp">
                   <Help />
                 </IconButton>
               </Link>
