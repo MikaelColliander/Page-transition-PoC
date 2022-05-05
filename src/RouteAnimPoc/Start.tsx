@@ -1,8 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Route, useLocation, useHistory, Redirect } from "react-router-dom";
-import { Dialog, Cancel } from "@sjse/component-library";
+import { Dialog, Cancel, PageTransition } from "@sjse/component-library";
 import TravelFinder from "./TravelFinder";
-import PageTransition from "../PageTransition/PageTransition";
 import {
   useDialog,
   Component as ComponentType,
@@ -54,7 +53,7 @@ const Start = () => {
     },
     help: {
       Component: Help,
-      direction: "left",
+      direction: "up",
       name: "help",
     },
   };
@@ -168,7 +167,6 @@ const Start = () => {
                 return (
                   <PageTransition
                     isMatch={match?.url === location.pathname}
-                    pathname={location.pathname}
                     scrollY={getStorageItem(match?.url || "", "y")}
                     animationType={pathDepth >= 0 ? "forward" : "backward"}
                     scrollTarget={ref.current}

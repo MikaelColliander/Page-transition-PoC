@@ -58,13 +58,13 @@ const Outbound = () => {
         rightButtonProps={{
           icon: <Help />,
           label: "Hjälp",
-          action: () => openDialog({direction: 'left', component: 'help'}),
+          action: () => openDialog({direction: 'up', component: 'help'}),
         }}
         sticky={true}
       />
-      <Container>
+      <Container maxWidth="sm">
         <Box mb={2} mt={3}>
-          <Typography variant="h1" gutterBottom>Scroll abd Focus Restoration</Typography>
+          <Typography variant="h1" gutterBottom>Scroll and Focus Restoration</Typography>
           <Typography paragraph>
             The concept of sliding, layered transitions requires scroll restoration to be handled. Scroll down in this list and select an item. Then go back, 
             by means of the browser controls or by means of the UI and observe the scroll position.
@@ -74,54 +74,104 @@ const Outbound = () => {
         </Box>
         <Box p={2} />
         <DepartureCard
-          departureDate={new Date()}
-          arrivalDate={new Date()}
-          price={1337}
-          onClick={handleClick}
-          transportations={[
-            { id: "X2000", name: "X2000", concept: "X2", travelType: "X2" },
-          ]}
-        />
-        <Box p={2} />
-        <DepartureCard
-          departureDate={new Date()}
-          arrivalDate={new Date()}
-          price={1337}
-          onClick={handleClick}
-          transportations={[
-            { id: "X2000", name: "X2000", concept: "X2", travelType: "X2" },
-          ]}
-        />
-        <Box p={2} />
-        <DepartureCard
-          departureDate={new Date()}
-          arrivalDate={new Date()}
-          price={1337}
-          onClick={handleClick}
-          transportations={[
-            { id: "X2000", name: "X2000", concept: "X2", travelType: "X2" },
-          ]}
-        />
-        <Box p={2} />
-        <DepartureCard
-          departureDate={new Date()}
-          arrivalDate={new Date()}
-          price={1337}
-          onClick={handleClick}
-          transportations={[
-            { id: "X2000", name: "X2000", concept: "X2", travelType: "X2" },
-          ]}
-        />
-        <Box p={2} />
-        <DepartureCard
-          departureDate={new Date()}
-          arrivalDate={new Date()}
-          price={1337}
-          onClick={handleClick}
-          transportations={[
-            { id: "X2000", name: "X2000", concept: "X2", travelType: "X2" },
-          ]}
-        />
+            departureDate={new Date()}
+            arrivalDate={new Date()}
+            price={1337}
+            onClick={() => handleClick()}
+            transportations={[
+              {
+                id: "1337",
+                producer: "SJ",
+                travelType: "TRAIN",
+                concept: "X2000",
+                serviceBrandName: "världens bästa sj",
+                productName: "Snabbtåg",
+              },
+              {
+                id: "176",
+                producer: "SJ",
+                travelType: "TRAIN",
+                concept: "",
+                serviceBrandName: "Nåt skumt pendeltåg",
+                productName: "Snabbtåg",
+              },
+            ]}
+          />
+          <Box p={2} />
+          <DepartureCard
+            departureDate={new Date()}
+            arrivalDate={new Date()}
+            price={1337}
+            onClick={() => handleClick()}
+            transportations={[
+              {
+                id: "1337",
+                producer: "SJ",
+                travelType: "TRAIN",
+                concept: "X2000",
+                serviceBrandName: "världens bästa sj",
+                productName: "Snabbtåg",
+              },
+              {
+                id: "176",
+                producer: "SJ",
+                travelType: "TRAIN",
+                concept: "",
+                serviceBrandName: "Nåt skumt pendeltåg",
+                productName: "Snabbtåg",
+              },
+            ]}
+          />
+          <Box p={2} />
+          <DepartureCard
+            departureDate={new Date()}
+            arrivalDate={new Date()}
+            price={1337}
+            onClick={() => handleClick()}
+            transportations={[
+              {
+                id: "1337",
+                producer: "SJ",
+                travelType: "TRAIN",
+                concept: "X2000",
+                serviceBrandName: "världens bästa sj",
+                productName: "Snabbtåg",
+              },
+              {
+                id: "176",
+                producer: "SJ",
+                travelType: "TRAIN",
+                concept: "",
+                serviceBrandName: "Nåt skumt pendeltåg",
+                productName: "Snabbtåg",
+              },
+            ]}
+          />
+          <Box p={2} />
+          <DepartureCard
+            departureDate={new Date()}
+            arrivalDate={new Date()}
+            price={1337}
+            onClick={() => handleClick()}
+            transportations={[
+              {
+                id: "1337",
+                producer: "SJ",
+                travelType: "TRAIN",
+                concept: "X2000",
+                serviceBrandName: "världens bästa sj",
+                productName: "Snabbtåg",
+              },
+              {
+                id: "176",
+                producer: "SJ",
+                travelType: "TRAIN",
+                concept: "",
+                serviceBrandName: "Nåt skumt pendeltåg",
+                productName: "Snabbtåg",
+              },
+            ]}
+          />
         <Box p={2} />
       </Container>
     </Page>

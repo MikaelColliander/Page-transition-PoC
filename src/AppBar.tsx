@@ -33,7 +33,7 @@ export const AppBarOnImage = () => {
   const classes = useStyles();
   const openDialog = useOpdenDialog();
   const handleOnClick = () => {
-    openDialog({direction: "left", component: "help"});
+    openDialog({direction: "up", component: "help"});
   };
 
   return (
@@ -57,10 +57,13 @@ export const AppBarOnImage = () => {
           src="img.jpg"
           className={classes.exampleImage}
         />
-        <Container>
-          <Box my={2}>
+        <Container maxWidth="sm">
+          <Box my={2} pt={1}>
             <Typography variant="h1" gutterBottom>
               Routes with Transitions - A proof of concept
+            </Typography>
+            <Typography variant="h2" mb={2}>
+              Use mobile sized view to enjoy!
             </Typography>
             <Typography variant="h4" paragraph>
               This demo showcase animations between routes. Animation direction
@@ -76,11 +79,11 @@ export const AppBarOnImage = () => {
               This demo makes use of React Transition Group, specifically{" "}
               <a href="http://reactcommunity.org/react-transition-group/css-transition">
                 CSSTransition
-              </a>{" "}
+              </a>
               paired with <a href="https://reactrouter.com/">React Router</a> to
               achieve it's goals.
             </Typography>
-            <Box mb={12}>
+            <Box mb={4}>
               <Typography variant="body1" paragraph>
                 Besides the routes, globally accessible information and
                 controls, such as "Help" and "Login" can be accessed through the

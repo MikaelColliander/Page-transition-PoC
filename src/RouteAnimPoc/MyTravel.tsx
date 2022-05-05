@@ -49,11 +49,11 @@ const Outbound = () => {
         rightButtonProps={{
           icon: <Help />,
           label: "Help",
-          action: () => openDialog({direction: 'left'}),
+          action: () => openDialog({direction: 'up'}),
         }}
         sticky={true}
       />
-      <Container>
+      <Container maxWidth="sm">
         <Box mb={2} mt={3}>
           <Typography variant="h1" gutterBottom>
             Globally accessible controls
@@ -68,7 +68,9 @@ const Outbound = () => {
           <Typography paragraph>
             Click on the Login button below to invoke the same dialog, this time rendering with a different component.
           </Typography>
-          <FlowButton fullWidth onClick={() => openDialog({direction: 'up', component: 'login'})}>Logga in</FlowButton>
+          <Box pt={2}>
+          <FlowButton onClick={() => openDialog({direction: 'up', component: 'login'})}>Logga in</FlowButton>
+          </Box>
         </Box>
       </Container>
     </Page>

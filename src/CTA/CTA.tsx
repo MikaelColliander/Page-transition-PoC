@@ -13,6 +13,9 @@ export const CTA = (props: Props) => {
         position: "fixed",
         bottom: 0,
         width: "100%",
+        maxWidth: "400px",
+        left: "50%",
+        transform: "translateX(-50%)",
       },
     })
   );
